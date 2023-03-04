@@ -50,7 +50,7 @@ https://github.com/CyberAgentHack/web-speed-hackathon-2023-scoring-tool
 
 採点の詳細についてはこちらに記載しています
 
-https://github.com/CyberAgentHack/web-speed-hackathon-2023-scoring-tool/docs/SCORING.md
+https://github.com/CyberAgentHack/web-speed-hackathon-2023-scoring-tool/blob/main/docs/SCORING.md
 
 ## レギュレーション
 
@@ -58,7 +58,7 @@ https://github.com/CyberAgentHack/web-speed-hackathon-2023-scoring-tool/docs/SCO
 
 レギュレーションの詳細についてはこちらに記載しています
 
-https://github.com/CyberAgentHack/web-speed-hackathon-2023-scoring-tool/docs/REGULATION.md
+https://github.com/CyberAgentHack/web-speed-hackathon-2023-scoring-tool/blob/main/docs/REGULATION.md
 
 ### 上位にランクインしたアプリケーションについて
 
@@ -67,7 +67,7 @@ https://github.com/CyberAgentHack/web-speed-hackathon-2023-scoring-tool/docs/REG
 
 チェックリストの詳細についてはこちらに記載しています
 
-https://github.com/CyberAgentHack/web-speed-hackathon-2023-scoring-tool/docs/CHECKLIST.md
+https://github.com/CyberAgentHack/web-speed-hackathon-2023-scoring-tool/blob/main/docs/CHECKLIST.md
 
 ## 開発方法
 
