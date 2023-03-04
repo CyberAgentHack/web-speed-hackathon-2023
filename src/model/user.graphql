@@ -1,0 +1,7 @@
+type User {
+  id: Int!
+  email: String!
+  profile: Profile!
+  reviews: [Review!]!
+  orders: [Order!]!
+}

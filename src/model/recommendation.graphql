@@ -1,0 +1,4 @@
+type Recommendation {
+  id: Int!
+  product: Product!
+}

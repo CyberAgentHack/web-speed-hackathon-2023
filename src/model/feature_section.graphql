@@ -1,0 +1,5 @@
+type FeatureSection {
+  id: Int!
+  title: String!
+  items: [FeatureItem!]!
+}

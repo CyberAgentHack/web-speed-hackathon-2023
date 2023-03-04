@@ -1,0 +1,9 @@
+type Product {
+  id: Int!
+  name: String!
+  price: Int!
+  description: String!
+  media: [ProductMedia!]!
+  offers: [LimitedTimeOffer!]!
+  reviews: [Review!]!
+}

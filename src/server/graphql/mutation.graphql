@@ -1,0 +1,8 @@
+type Mutation {
+  signin(email: String!, password: String!): Boolean!
+  signup(email: String!, name: String!, password: String!): Boolean!
+  signout: Boolean!
+  sendReview(productId: Int!, comment: String!): Boolean!
+  updateItemInShoppingCart(productId: Int!, amount: Int!): Boolean!
+  orderItemsInShoppingCart(zipCode: String!, address: String!): Boolean!
+}

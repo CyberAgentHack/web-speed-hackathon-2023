@@ -1,0 +1,7 @@
+type Review {
+  id: Int!
+  user: User!
+  postedAt: String!
+  product: Product!
+  comment: String!
+}

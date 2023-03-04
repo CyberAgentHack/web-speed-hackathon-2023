@@ -1,0 +1,6 @@
+type ShoppingCartItem {
+  id: Int!
+  product: Product!
+  amount: Int!
+  order: Order!
+}

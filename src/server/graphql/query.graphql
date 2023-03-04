@@ -1,0 +1,7 @@
+type Query {
+  product(id: Int!): Product!
+  recommendations: [Recommendation!]!
+  features: [FeatureSection!]!
+  user(id: Int!): User!
+  me: User
+}

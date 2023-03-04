@@ -1,0 +1,6 @@
+type LimitedTimeOffer {
+  id: Int!
+  price: Int!
+  startDate: String!
+  endDate: String!
+}

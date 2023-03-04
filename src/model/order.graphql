@@ -1,0 +1,8 @@
+type Order {
+  id: Int!
+  items: [ShoppingCartItem!]!
+  user: User!
+  zipCode: String!
+  address: String!
+  isOrdered: Boolean!
+}
