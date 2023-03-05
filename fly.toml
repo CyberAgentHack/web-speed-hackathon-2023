@@ -1,3 +1,6 @@
+# fly.toml file generated for mehm8128-webspeedhackathon-2023 on 2023-03-05T13:03:02+09:00
+
+app = "mehm8128-webspeedhackathon-2023"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
