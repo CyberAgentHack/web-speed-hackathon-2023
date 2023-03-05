@@ -95,6 +95,7 @@
     "prettier": "2.8.0",
     "prettier-plugin-packagejson": "2.4.3",
     "prettier-plugin-sort-json": "1.0.0",
+    "rollup-plugin-visualizer": "5.9.0",
     "stylelint": "15.1.0",
     "stylelint-config-recommended": "10.0.1",
     "stylelint-order": "6.0.2",
@@ -108,6 +109,6 @@
   "packageManager": "pnpm@7.24.3",
   "engines": {
     "node": ">=18.0.0",
-    "pnpm": ">=7.24.3"
+    "pnpm": ">=7.9.5"
   }
 }
