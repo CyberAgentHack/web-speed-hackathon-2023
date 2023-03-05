@@ -33,7 +33,6 @@ specifiers:
   cross-env: 7.0.3
   csstype: 3.1.1
   currency-formatter: 1.5.9
-  date-time-format-timezone: 1.0.22
   eslint: 8.29.0
   eslint-config-prettier: 8.5.0
   eslint-import-resolver-typescript: 3.5.3
@@ -101,7 +100,6 @@ dependencies:
   classnames: 2.3.2
   core-js: 3.29.0
   currency-formatter: 1.5.9
-  date-time-format-timezone: 1.0.22
   formik: 2.2.9_react@18.2.0
   graphql: 16.6.0
   http-graceful-shutdown: 3.1.13
@@ -2645,10 +2643,6 @@ packages:
   /date-fns/2.29.3:
     resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
     engines: {node: '>=0.11'}
-    dev: false
-
-  /date-time-format-timezone/1.0.22:
-    resolution: {integrity: sha512-4hEeKPpNlbFO05ldht9FwJEy2g1xL7kU3dTPY5hNSd1AyMjrrIeUS54kSWgt/KdttYshhjDMIonU+vCmL4NjVw==}
     dev: false
 
   /debug/2.6.9:
