@@ -15,6 +15,7 @@ export const Image: FC<Props> = ({ fill, ...rest }) => {
       })}
       loading="eager"
       {...rest}
+      src={rest.src?.replace('jpg', 'webp')}
     />
   );
 };

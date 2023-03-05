@@ -19,6 +19,7 @@ async function loadImageAsDataURL(url: string): Promise<string> {
     locateFile: () => CanvasKitWasmUrl,
   });
 
+  console.log(url);
   // 画像を読み込む
   const data = await fetch(url).then((res) => res.arrayBuffer());
   const image = CanvasKit.MakeImageFromEncoded(data);
@@ -49,7 +50,7 @@ export const ProductHeroImage: FC<Props> = memo(({ product, title }) => {
     if (thumbnailFile == null) {
       return;
     }
-    loadImageAsDataURL(thumbnailFile.filename).then((dataUrl) => setImageDataUrl(dataUrl));
+    loadImageAsDataURL(thumbnailFile.filename.replace('jpg', 'webp')).then((dataUrl) => setImageDataUrl(dataUrl));
   }, [thumbnailFile]);
 
   if (imageDataUrl === undefined) {
