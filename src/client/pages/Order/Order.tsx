@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Layout } from '../../components/application/Layout';
@@ -19,6 +20,10 @@ export const Order: FC = () => {
   const { updateCartItem } = useUpdateCartItem();
   const { submitOrder } = useSubmitOrder();
   const { order } = useOrder();
+
+  useEffect(() => {
+    document.title = '購入手続き';
+  }, []);
 
   if (authUserLoading) {
     return null;
@@ -83,9 +88,6 @@ export const Order: FC = () => {
 
   return (
     <>
-      <head>
-        <title>購入手続き</title>
-      </head>
       <Layout>
         <WidthRestriction>{renderContents()}</WidthRestriction>
       </Layout>

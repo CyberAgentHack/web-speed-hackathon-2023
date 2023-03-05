@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { useEffect } from 'react';
 
 import { Layout } from '../../components/application/Layout';
 import { ProductList } from '../../components/feature/ProductList';
@@ -12,15 +13,16 @@ export const Top: FC = () => {
   const { recommendation } = useRecommendation();
   const { features } = useFeatures();
 
+  useEffect(() => {
+    document.title = '買えるオーガニック';
+  }, []);
+
   if (recommendation === undefined || features === undefined) {
     return null;
   }
 
   return (
     <>
-      <head>
-        <title>買えるオーガニック</title>
-      </head>
       <Layout>
         <div>
           <ProductHeroImage product={recommendation.product} title="今週のオススメ" />

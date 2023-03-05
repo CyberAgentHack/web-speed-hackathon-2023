@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { Layout } from '../../components/application/Layout';
@@ -46,13 +47,13 @@ export const ProductDetail: FC = () => {
     });
   };
 
+  useEffect(() => {
+    if (!product) return;
+    document.title = product.name;
+  }, [product]);
+
   return (
     <>
-      {product && (
-        <head>
-          <title>{product.name}</title>
-        </head>
-      )}
       <Layout>
         <WidthRestriction>
           <div className={styles.container()}>

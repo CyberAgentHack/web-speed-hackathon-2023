@@ -25,6 +25,7 @@ export const OrderComplete: FC = () => {
     loadFonts().then(() => {
       setIsReadyFont(true);
     });
+    document.title = '購入が完了しました';
   }, []);
 
   if (!recommendation || !isReadyFont || authUserLoading) {
@@ -37,9 +38,6 @@ export const OrderComplete: FC = () => {
 
   return (
     <>
-      <head>
-        <title>購入が完了しました</title>
-      </head>
       <Layout>
         <GetDeviceType>
           {({ deviceType }) => (

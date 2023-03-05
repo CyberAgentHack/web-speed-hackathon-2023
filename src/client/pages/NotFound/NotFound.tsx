@@ -16,6 +16,8 @@ export const NotFound: FC = () => {
     };
 
     load();
+
+    document.title = 'ページが見つかりませんでした';
   }, []);
 
   if (!isReady) {
@@ -24,9 +26,6 @@ export const NotFound: FC = () => {
 
   return (
     <>
-      <head>
-        <title>ページが見つかりませんでした</title>
-      </head>
       <Layout>
         <div className={styles.container()}>
           <div className={styles.inner()}>
