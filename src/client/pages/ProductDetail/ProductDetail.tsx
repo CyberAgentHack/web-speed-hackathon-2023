@@ -1,5 +1,4 @@
 import type { FC } from 'react';
-import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 
 import { Layout } from '../../components/application/Layout';
@@ -50,9 +49,9 @@ export const ProductDetail: FC = () => {
   return (
     <>
       {product && (
-        <Helmet>
+        <head>
           <title>{product.name}</title>
-        </Helmet>
+        </head>
       )}
       <Layout>
         <WidthRestriction>

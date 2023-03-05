@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
 
 import { Layout } from '../../components/application/Layout';
 import { loadFonts } from '../../utils/load_fonts';
@@ -25,9 +24,9 @@ export const NotFound: FC = () => {
 
   return (
     <>
-      <Helmet>
+      <head>
         <title>ページが見つかりませんでした</title>
-      </Helmet>
+      </head>
       <Layout>
         <div className={styles.container()}>
           <div className={styles.inner()}>
