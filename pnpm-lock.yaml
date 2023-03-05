@@ -17,7 +17,6 @@ specifiers:
   '@types/koa-send': 4.1.3
   '@types/koa-session': 5.10.6
   '@types/koa-static': 4.0.2
-  '@types/lodash': 4.14.191
   '@types/node': 18.11.15
   '@types/react': 18.0.24
   '@types/react-dom': 18.0.8
@@ -49,7 +48,6 @@ specifiers:
   koa-send: 5.0.1
   koa-session: 6.4.0
   koa-static: 5.0.0
-  lodash: 4.17.21
   modern-css-reset: 1.4.0
   nodemon: 2.0.20
   npm-run-all: 4.1.5
@@ -61,6 +59,7 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   react-error-boundary: 3.1.4
+  react-fast-compare: 3.2.0
   react-icons: 4.7.1
   react-is: 18.2.0
   react-overlays: 5.2.1
@@ -108,11 +107,11 @@ dependencies:
   koa-send: 5.0.1
   koa-session: 6.4.0
   koa-static: 5.0.0
-  lodash: 4.17.21
   modern-css-reset: 1.4.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-error-boundary: 3.1.4_react@18.2.0
+  react-fast-compare: 3.2.0
   react-icons: 4.7.1_react@18.2.0
   react-is: 18.2.0
   react-overlays: 5.2.1_biqbaboplfbrettd7655fr4n2y
@@ -137,7 +136,6 @@ devDependencies:
   '@types/koa-route': 3.2.5
   '@types/koa-send': 4.1.3
   '@types/koa-static': 4.0.2
-  '@types/lodash': 4.14.191
   '@types/node': 18.11.15
   '@types/react': 18.0.24
   '@types/react-dom': 18.0.8
@@ -1640,10 +1638,6 @@ packages:
       '@types/keygrip': 1.0.2
       '@types/koa-compose': 3.2.5
       '@types/node': 18.11.15
-
-  /@types/lodash/4.14.191:
-    resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
-    dev: true
 
   /@types/long/4.0.2:
     resolution: {integrity: sha512-MqTGEo5bj5t157U6fA/BiDynNkn0YknVdh48CMPkTSpFTVmvao5UQmm7uEF6xBEo7qIMAlY/JSleYaE6VOdpaA==}
@@ -5404,6 +5398,10 @@ packages:
 
   /react-fast-compare/2.0.4:
     resolution: {integrity: sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==}
+    dev: false
+
+  /react-fast-compare/3.2.0:
+    resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
     dev: false
 
   /react-icons/4.7.1_react@18.2.0:

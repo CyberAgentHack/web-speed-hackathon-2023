@@ -1,6 +1,6 @@
-import _ from 'lodash';
 import type { FC } from 'react';
 import { memo } from 'react';
+import isEqual from 'react-fast-compare';
 
 import type { FeatureSectionFragmentResponse } from '../../../graphql/fragments';
 import { DeviceType, GetDeviceType } from '../../foundation/GetDeviceType';
@@ -26,6 +26,6 @@ export const ProductList: FC<Props> = memo(({ featureSection }) => {
       }}
     </GetDeviceType>
   );
-}, _.isEqual);
+}, isEqual);
 
 ProductList.displayName = 'ProductList';

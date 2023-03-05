@@ -1,8 +1,8 @@
 import type { FormikErrors } from 'formik';
 import { useFormik } from 'formik';
-import _ from 'lodash';
 import type { FC } from 'react';
 import { memo } from 'react';
+import isEqual from 'react-fast-compare';
 import * as z from 'zod';
 
 import type { ReviewFragmentResponse } from '../../../graphql/fragments';
@@ -71,6 +71,6 @@ export const ReviewSection: FC<Props> = memo(({ hasSignedIn, onSubmitReview, rev
       )}
     </div>
   );
-}, _.isEqual);
+}, isEqual);
 
 ReviewSection.displayName = 'ReviewSection';
