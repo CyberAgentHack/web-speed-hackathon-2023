@@ -10,6 +10,7 @@ import route from 'koa-route';
 import send from 'koa-send';
 import session from 'koa-session';
 import serve from 'koa-static';
+import zipcodeJa from 'zipcode-ja';
 
 import type { Context } from './context';
 import { dataSource } from './data_source';
@@ -59,6 +60,27 @@ async function init(): Promise<void> {
     }),
   );
 
+  app.use(route.get('/zipCode', (ctx) => {
+    const zipCode = ctx.request.query.zipCode;
+    const address = [...(zipcodeJa[zipCode]?.address ?? [])];
+    const prefecture = address.shift();
+    const city = address.join(' ');
+    const responseJson = {
+      address,
+      city,
+      prefecture,
+      zipCode,
+    };
+
+    if (!zipCode) {
+      ctx.response.status = 404;
+      return;
+    }
+
+    ctx.response.type = 'application/json';
+    ctx.response.body = JSON.stringify(responseJson);
+    ctx.response.status = 200;
+  }));
 
   app.use(async (ctx, next) => {
       const url = ctx.request.url;
