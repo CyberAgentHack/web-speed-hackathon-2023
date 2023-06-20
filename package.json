@@ -65,6 +65,7 @@
     "@types/currency-formatter": "1.5.1",
     "@types/koa": "2.13.5",
     "@types/koa-bodyparser": "4.3.10",
+    "@types/koa-compress": "4.0.3",
     "@types/koa-logger": "3.1.2",
     "@types/koa-route": "3.2.5",
     "@types/koa-send": "4.1.3",
