@@ -4,6 +4,7 @@ import { koaMiddleware } from '@as-integrations/koa';
 import gracefulShutdown from 'http-graceful-shutdown';
 import Koa from 'koa';
 import bodyParser from 'koa-bodyparser';
+import compress from 'koa-compress';
 import logger from 'koa-logger';
 import route from 'koa-route';
 import send from 'koa-send';
@@ -55,6 +56,8 @@ async function init(): Promise<void> {
       ctx.status = 204;
     }),
   );
+
+  app.use(compress());
 
   app.use(async (ctx, next) => {
       const url = ctx.request.url;
