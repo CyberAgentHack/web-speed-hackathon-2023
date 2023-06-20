@@ -56,6 +56,14 @@ async function init(): Promise<void> {
     }),
   );
 
+  app.use(async (ctx, next) => {
+      const url = ctx.request.url;
+      if (url.includes('/images') && url.includes('jpg')) {
+          ctx.response.redirect(url.replace('jpg', 'webp'));
+      }
+      await next();
+  });
+
   app.use(serve(rootResolve('dist')));
   app.use(serve(rootResolve('public')));
 
