@@ -36,6 +36,8 @@ async function init(): Promise<void> {
     await next();
   });
 
+  app.use(compress());
+
   const apolloServer = await initializeApolloServer();
   await apolloServer.start();
 
@@ -57,7 +59,6 @@ async function init(): Promise<void> {
     }),
   );
 
-  app.use(compress());
 
   app.use(async (ctx, next) => {
       const url = ctx.request.url;
