@@ -27,11 +27,18 @@ export default defineConfig(async () => {
   return {
     build: {
       assetsInlineLimit: 20480,
-      cssCodeSplit: false,
+      cssCodeSplit: true,
       cssTarget: 'es6',
       rollupOptions: {
         output: {
           experimentalMinChunkSize: 40960,
+          manualChunks: (id) => {
+            if (id.includes("node_modules")) {
+              if (id.includes("react")) {
+                return "vendor_react";
+              }
+            }
+          },
         },
         plugins: [visualizer({ gzipSize: true })],
         treeshake: 'recommended',
