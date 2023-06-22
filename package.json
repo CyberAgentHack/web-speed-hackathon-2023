@@ -3,7 +3,7 @@
   "license": "MPL-2.0",
   "scripts": {
     "start": "npm-run-all -p start:client start:server",
-    "start:client": "cross-env NODE_ENV=development vite build --watch",
+    "start:client": "cross-env NODE_ENV=production vite build --watch",
     "start:server": "nodemon --watch src/server --ext 'ts,tsx' --exec 'ts-node src/server'",
     "build": "npm-run-all -s build:tsc build:vite",
     "build:tsc": "tsc",
