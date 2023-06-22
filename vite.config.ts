@@ -1,6 +1,9 @@
 import path from 'node:path';
 
+import replace from '@rollup/plugin-replace';
+import terser from '@rollup/plugin-terser';
 import react from '@vitejs/plugin-react';
+import gzip from 'rollup-plugin-gzip';
 import { defineConfig } from 'vite';
 import { ViteEjsPlugin } from 'vite-plugin-ejs';
 import topLevelAwait from 'vite-plugin-top-level-await';
@@ -31,18 +34,30 @@ export default defineConfig(async () => {
         output: {
           experimentalMinChunkSize: 40960,
         },
+        treeshake: 'recommended',
       },
       target: 'modules',
     },
     plugins: [
       react(),
       wasm(),
+      replace({
+        'process.env.NODE_ENV': JSON.stringify('production')
+      }),
       topLevelAwait(),
       ViteEjsPlugin({
         module: '/src/client/index.tsx',
         title: '買えるオーガニック',
         videos,
       }),
+      terser({
+        compress: {
+          global_defs: { '@process.env.NODE_ENV': JSON.stringify('production') },
+          toplevel: true,
+        },
+        mangle: { toplevel: true },
+      }),
+      gzip(),
     ],
   };
 });
