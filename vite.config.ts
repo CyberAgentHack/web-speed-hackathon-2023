@@ -4,6 +4,7 @@ import replace from '@rollup/plugin-replace';
 import terser from '@rollup/plugin-terser';
 import react from '@vitejs/plugin-react';
 import gzip from 'rollup-plugin-gzip';
+import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 import { ViteEjsPlugin } from 'vite-plugin-ejs';
 import topLevelAwait from 'vite-plugin-top-level-await';
@@ -34,6 +35,7 @@ export default defineConfig(async () => {
         output: {
           experimentalMinChunkSize: 40960,
         },
+        plugins: [visualizer({ gzipSize: true })],
         treeshake: 'recommended',
       },
       target: 'modules',
