@@ -84,8 +84,14 @@ async function init(): Promise<void> {
 
   app.use(async (ctx, next) => {
       const url = ctx.request.url;
+      const isHero = ctx.request.query.isHero;
       if (url.includes('/images') && url.includes('jpg')) {
-          ctx.response.redirect(url.replace('jpg', 'webp'));
+          if (isHero === 'true') {
+              ctx.response.redirect(url.replace('jpg', 'hero.webp'));
+              await next();
+              return;
+          }
+          ctx.response.redirect(url.replace('jpg', 'min.webp'));
       }
       await next();
   });
