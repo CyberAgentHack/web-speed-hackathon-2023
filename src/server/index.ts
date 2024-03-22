@@ -16,7 +16,7 @@ import { initializeApolloServer } from './graphql';
 import { initializeDatabase } from './utils/initialize_database';
 import { rootResolve } from './utils/root_resolve';
 
-const PORT = Number(process.env.PORT ?? 8080);
+const PORT = Number(process.env.PORT ?? 3000);
 
 async function init(): Promise<void> {
   await initializeDatabase();
