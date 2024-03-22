@@ -1,0 +1,2 @@
+
+find ./public/images/products/ -name "*.jpg" | xargs cavif --quality=50 --speed=2 --overwrite 
