@@ -34,3 +34,4 @@ export const ProductListSlideButton: FC<Props> = ({ arrowType, disabled, onClick
     </button>
   );
 };
+

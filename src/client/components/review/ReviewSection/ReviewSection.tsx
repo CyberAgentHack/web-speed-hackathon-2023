@@ -1,6 +1,6 @@
 import type { FormikErrors } from 'formik';
 import { useFormik } from 'formik';
-import _ from 'lodash';
+import isEqual from 'lodash/isEqual';
 import type { FC } from 'react';
 import { memo } from 'react';
 import * as z from 'zod';
@@ -71,6 +71,6 @@ export const ReviewSection: FC<Props> = memo(({ hasSignedIn, onSubmitReview, rev
       )}
     </div>
   );
-}, _.isEqual);
+}, isEqual);
 
 ReviewSection.displayName = 'ReviewSection';

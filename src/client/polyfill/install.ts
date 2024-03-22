@@ -1,5 +1,6 @@
-import 'core-js';
-import 'date-time-format-timezone';
+// TODO 本当は必要かもこの２つ
+// import 'core-js';
+// import 'date-time-format-timezone';
 import 'setimmediate';
 import './temporal';
 

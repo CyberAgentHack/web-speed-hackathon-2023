@@ -1,7 +1,7 @@
 import CanvasKitInit from 'canvaskit-wasm';
 import CanvasKitWasmUrl from 'canvaskit-wasm/bin/canvaskit.wasm?url';
 import classNames from 'classnames';
-import _ from 'lodash';
+import isEqual from 'lodash/isEqual';
 import { memo, useEffect, useState } from 'react';
 import type { FC } from 'react';
 
@@ -93,6 +93,6 @@ export const ProductHeroImage: FC<Props> = memo(({ product, title }) => {
       }}
     </GetDeviceType>
   );
-}, _.isEqual);
+}, isEqual);
 
 ProductHeroImage.displayName = 'ProductHeroImage';

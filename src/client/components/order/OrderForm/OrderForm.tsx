@@ -1,12 +1,14 @@
 import { useFormik } from 'formik';
-import _ from 'lodash';
+import cloneDeep from 'lodash/cloneDeep';
 import type { ChangeEventHandler, FC } from 'react';
-import zipcodeJa from 'zipcode-ja';
+// import zipcodeJa from 'zipcode-ja';
+const zipcodeJa: any = await import('zipcode-ja');
 
 import { PrimaryButton } from '../../foundation/PrimaryButton';
 import { TextInput } from '../../foundation/TextInput';
 
 import * as styles from './OrderForm.styles';
+
 
 type OrderFormValue = {
   zipCode: string;
@@ -32,9 +34,8 @@ export const OrderForm: FC<Props> = ({ onSubmit }) => {
 
   const handleZipcodeChange: ChangeEventHandler<HTMLInputElement> = (event) => {
     formik.handleChange(event);
-
     const zipCode = event.target.value;
-    const address = [...(_.cloneDeep(zipcodeJa)[zipCode]?.address ?? [])];
+    const address = [...(cloneDeep(zipcodeJa)[zipCode]?.address ?? [])];
     const prefecture = address.shift();
     const city = address.join(' ');
 
