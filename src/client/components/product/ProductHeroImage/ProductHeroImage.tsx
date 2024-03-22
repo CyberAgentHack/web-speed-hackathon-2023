@@ -21,6 +21,7 @@ async function loadImageAsDataURL(url: string): Promise<string> {
 
   // 画像を読み込む
   const data = await fetch(url).then((res) => res.arrayBuffer());
+  // MakeImageFromEncoded
   const image = CanvasKit.MakeImageFromEncoded(data);
   if (image == null) {
     // 読み込みに失敗したとき、透明な 1x1 GIF の Data URL を返却する
@@ -32,7 +33,7 @@ async function loadImageAsDataURL(url: string): Promise<string> {
   const ctx = canvas.getContext('2d');
   // @ts-expect-error ...
   ctx?.drawImage(image, 0, 0);
-  return canvas.toDataURL();
+  return canvas.toDataURL("image/webp");
 }
 
 type Props = {

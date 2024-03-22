@@ -1,2 +1,12 @@
 
 find ./public/images/products/ -name "*.jpg" | xargs cavif --quality=50 --speed=2 --overwrite 
+
+find ./public/images/products -name "*.jpg" | sed 's/.jpg//g' | xargs -I% cwebp -q 10 %.jpg -o %.webp
+find ./public/images/products -name "*.jpg" | sed 's/.jpg//g' | xargs -I% cwebp -q 50 -lossless %.jpg -o %.webp
+
+find ./public/images/products -name "*.jpg" | sed 's/.jpg//g' | xargs -I% cwebp -resize 300 0  %.jpg -o %.webp
+
+find ./public/images/products/banana -name "*.jpg" | sed 's/.jpg//g' | xargs -I% cwebp -q 1 -lossless %.jpg -o %.webp
+
+
+
